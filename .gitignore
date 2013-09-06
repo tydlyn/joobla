@@ -29,7 +29,6 @@ administrator/components/com_weblinks/*
 administrator/components/index.html
 administrator/help/*
 administrator/includes/*
-administrator/language/en-GB/
 administrator/language/en-GB/en-GB.com_admin.ini
 administrator/language/en-GB/en-GB.com_admin.sys.ini
 administrator/language/en-GB/en-GB.com_banners.ini
@@ -124,8 +123,8 @@ administrator/language/en-GB/en-GB.plg_authentication_joomla.ini
 administrator/language/en-GB/en-GB.plg_authentication_joomla.sys.ini
 administrator/language/en-GB/en-GB.plg_authentication_ldap.ini
 administrator/language/en-GB/en-GB.plg_authentication_ldap.sys.ini
-administrator/language/en-GB/en-GB.plg_content_recaptcha.ini
-administrator/language/en-GB/en-GB.plg_content_recaptcha.sys.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha.ini
+administrator/language/en-GB/en-GB.plg_captcha_recaptcha.sys.ini
 administrator/language/en-GB/en-GB.plg_content_emailcloak.ini
 administrator/language/en-GB/en-GB.plg_content_emailcloak.sys.ini
 administrator/language/en-GB/en-GB.plg_content_finder.ini
