@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+    <name>com_tydlyn</name>
+    <author>Habib MAALEM</author>
+    <creationDate>September 2013</creationDate>
+    <copyright>(C) 2005 - 2013 Tydlyn. All rights reserved.	</copyright>
+    <license>The MIT License (MIT); see	LICENSE</license>
+    <authorEmail>habib.maalem@gmail.com</authorEmail>
+    <authorUrl>www.tydlyn.com</authorUrl>
+    <version>0.0.1</version>
+    <description>COM_TYDLYN__XML_DESCRIPTION</description>
+
+    <!-- Runs on install/uninstall/update; New in 2.5 -->
+    <scriptfile>script.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <files folder="site">
+        <filename>tydlyn.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>metadata.xml</filename>
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+
+    <media folder="media" destination="com_tydlyn">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB.com_tydlyn.ini</language>
+    </languages>
+
+    <administration>
+        <menu img="class:tydlyn">COM_TYDLYN</menu>
+        <submenu>
+            <menu link="option=com_tydlyn" view="tydlyn" img="class:tydlyn" alt="Tydlyn/Tydlyn">COM_TYDLYN_TYDLYN</menu>
+            <menu link="option=com_categories&amp;extension=com_tydlyn" view="categories" img="class:tydlyn-cat" alt="Tydlyn/Categories">COM_TYDLYN_CATEGORIES</menu>
+            <menu link="option=com_tydlyn" view="jobs" img="class:tydlyn-jobs" alt="Tydlyn/Jobs">COM_TYDLYN_JOBS</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>tydlyn.php</filename>
+            <filename>index.html</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_tydlyn.ini</language>
+            <language tag="en-GB">language/en-GB.com_tydlyn.sys.ini</language>
+        </languages>
+    </administration>
+
+    <!-- Tydlyn Update Specification -->
+    <updateservers>
+        <server type="extension" priority="1" name="Extension Update Site">http://tydlyn.com/extension.xml</server>
+        <server type="collection" priority="2" name="Collection Update Site">http://tydlyn.com/collection.xml</server>
+    </updateservers>
+
+    <!-- Tables -->
+    <!-- These are used for backups to determine which tables to backup; ones marked optional are only backed up if they exist -->
+    <tables>
+    </tables>
+
+    <!--  Dependencies -->
+    <dependencies>
+    </dependencies>
+</extension>
